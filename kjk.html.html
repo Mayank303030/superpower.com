@@ -2,6 +2,13 @@
 <html>
 <head>
 	<title>Uploadvideo</title>
+	<script>
+		let likes = 0;
+		function like() {
+			likes++;
+			document.getElementById('likes').textContent = likes + ' likes';
+		}
+	</script>
 </head>
 <body>
 	<video controls width="600" height="360">
@@ -40,6 +47,12 @@
 		<input type="submit" value="Upload">
 	</form>
 
+	<h1>Like Button Example</h1>
+	<button onclick="like()">Like</button>
+	<p id="likes">0 likes</p>
+	
+	
+	
 </body>
 	
 </html>
