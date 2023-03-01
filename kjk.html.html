@@ -50,5 +50,23 @@
 	<h1>Like Button Example</h1>
 	<button onclick="like()">Like</button>
 	<p id="likes">0 likes</p>
+	
+	<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	$video = $_FILES['video'];
+	if ($video['error'] === UPLOAD_ERR_OK) {
+		$destination = 'uploads/' . $video['name'];
+		move_uploaded_file($video['tmp_name'], $destination);
+		echo 'Video uploaded successfully.';
+	} else {
+		echo 'Error uploading video.';
+	}
+}
+?>
+
+	
+	
+	
+	
 </body>
 </html>
