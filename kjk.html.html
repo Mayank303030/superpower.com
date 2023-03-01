@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>video</title>
+	<title>Uploadvideo</title>
 </head>
 <body>
 	<video controls width="600" height="360">
@@ -31,6 +31,16 @@
 	<video controls width="100" height="100">
 		<source src="13-04-55.mp4" type="video/mp4">
 	</video>
+
+<h1>Upload Video</h1>
+	<form method="post" enctype="multipart/form-data">
+		<label for="video">Choose a video to upload:</label>
+		<input type="file" name="video" id="video">
+		<br>
+		<input type="submit" value="Upload">
+	</form>
+
 </body>
+	
 </html>
 
